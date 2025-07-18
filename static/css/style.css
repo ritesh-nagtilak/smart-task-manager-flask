@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f7f8fc, #e9ebf0);
+    color: #333;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffd700 !important;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.btn-primary, .btn-success, .btn-warning, .btn-danger {
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-success:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+    transform: scale(1.05);
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+.table {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table thead {
+    background: #2c3e50;
+    color: white;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"], textarea, select {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+}
+
+footer {
+    background: #222;
+    color: #aaa;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.alert {
+    border-radius: 5px;
+    font-weight: bold;
+    background: #f1c40f;
+    color: #2c3e50;
+}
+
+.container {
+    padding-bottom: 80px;
+} /* To avoid footer overlap */
+
+body, .navbar, footer, table th, .btn {
+    transition: background-color 0.3s, color 0.3s;
+}

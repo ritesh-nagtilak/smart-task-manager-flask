@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Welcome, {{ session['username'] }}!</h2>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4>Your Tasks</h4>
+        <a href="{{ url_for('add_task') }}" class="btn btn-primary">Add New Task</a>
+    </div>
+
+    {% if tasks %}
+        <div class="list-group">
+            {% for task in tasks %}
+                <div class="list-group-item list-group-item-action shadow-sm mb-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="mb-1">{{ task.title }}</h5>
+                            <p class="mb-1">{{ task.description or "No description provided." }}</p>
+                            <small>
+                                Priority:
+                                <span class="badge bg-{{ 'danger' if task.priority == 'High' else 'warning' if task.priority == 'Medium' else 'secondary' }}">{{ task.priority }}</span> |
+                                Status:
+                                <span class="badge bg-{{ 'success' if task.status == 'Done' else 'info' if task.status == 'In Progress' else 'secondary' }}">{{ task.status }}</span>
+                            </small>
+                        </div>
+
+                        <div class="text-end">
+                            <small class="text-muted d-block mb-2">{{ task.deadline if task.deadline else "No deadline" }}</small>
+                            <div>
+                                <a href="{{ url_for('edit_task', task_id=task.id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                <a href="{{ url_for('delete_task', task_id=task.id) }}" class="btn btn-sm btn-danger"
+                                onclick="return confirm('Are you sure you want to delete this task?');">Delete</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No tasks found. Click <a href="{{ url_for('add_task') }}">here</a> to add one.</p>
+    {% endif %}
+</div>
+{% endblock %}
