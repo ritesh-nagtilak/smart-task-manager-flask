@@ -1,0 +1,12 @@
+__pycache__/
+instance/
+.env
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+tasks.db
+*.db
+venv/
+instance/tasks.db
+instance/tasks.db
