@@ -24,8 +24,6 @@ For testing purposes:
 - **Email:** admin@gmail.com  
 - **Password:** adminpass
 
-> **Note:** Admin credentials are included here for demonstration purposes only. In production, handle sensitive data securely.
-
 ---
 
 ## 💻 Tech Stack
@@ -40,8 +38,8 @@ For testing purposes:
 
 1. **Clone this repository**
    ```bash
-   git clone https://github.com/yourusername/smart-task-manager.git
-   cd smart-task-manager
+   git clone https://github.com/ritesh-nagtilak/smart-task-manager-flask.git
+   cd smart-task-manager-flask
    ```
 
 2. **Create and activate a virtual environment**
